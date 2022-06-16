@@ -15,6 +15,7 @@
     --color-primary-variant: #111e88;
     --color-dark-variant: #677483;
     --color-background: #f6f6f9;
+    --color-background-argent: rgb(21, 62, 116);
 
     --card-border-radius: 2rem;
     --border-radius-1: 0.4rem;
@@ -96,12 +97,6 @@ small {
     font-size: 0.75rem;
 }
 
-.profile-photo {
-    width: 2.8rem;
-    height: 2.8rem;
-    border-radius: 50%;
-    overflow: hidden;
-}
 
 .text-muted {
     color: var(--color-info-dark)
@@ -218,7 +213,15 @@ main {
     margin-top: 1.4rem;
 }
 
+main .header {
+    text-align: left;
+    display: block;
+    color: var(--color-danger);
+}
 
+main .header > div.top {
+    text-align: right;
+}
 
 main .insights {
     display: grid;
@@ -259,10 +262,6 @@ main .insights > div.SostaMedia span {
     background: var(--color-primary-variant);
 }
 
-main .insights > div.Posteggi span {
-    background: var(--color-warning)
-}
-
 main .insights > div .middle {
     display: flex;
     align-items: center;
@@ -297,3 +296,42 @@ main .insights small{
     display: block;
 }
 
+main .posteggi {
+    margin-top: 4rem;
+    display: block;
+}
+
+main .posteggi h2 {
+    margin-bottom: 0.8rem;
+}
+
+main .posteggi table {
+    background: var(--color-white);
+    width: 100%;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+main .posteggi table:hover {
+    box-shadow: none;
+}
+
+main table tbody td {
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-light);
+    color: var(--color-dark-variant);
+}
+
+main table tbody tr:last-child td {
+    border: none;
+}
+
+main .posteggi a{
+    text-align: right;
+    display: block;
+    margin: 1rem auto;
+    color: var(--color-primary);
+}
