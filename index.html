@@ -1,154 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dashboard</title>
-        <!--MATERIAL ICONS-->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-        <!--STYLESHEET-->
-        <link rel="stylesheet" href="./style.css">
-    </head>
-    <body>
-        <div class="container">
-            <!---------------  STARTING ASIDE  ---------------->
-            <aside>
-                <div class="top">
-                    <div class="logo">
-                        <img src="./Images/ITS-Alto-Adriatico.png">
-                        <h1> Project <span class="project"> Work 2022 </span></h1>
-                    </div>
-                    <div class="close" id="close-btn">
-                        <span class="material-icons-sharp">close</span>
-                    </div>
-                </div>
-                
-                <div class="sidebar">
-                    <a href="#">
-                        <span class="material-icons-sharp">home</span>
-                        <h3>Home</h3>
-                    </a>
-                    <a href="#">
-                        <span class="material-icons-sharp">local_parking</span>
-                        <h3>Parcheggi</h3>
-                    </a>
-                    <a href="#">
-                        <span class="material-icons-sharp">toll</span>
-                        <h3>Posti Liberi</h3>
-                    </a>
-                    <a href="#">
-                        <span class="material-icons-sharp">schedule</span>
-                        <h3>Sosta Media</h3>
-                    </a>
-                </div>
-            </aside>
-            <!-------------------- END OF ASIDE -------------------->
-            <!-----------------  STARTING MAIN  ------------------->
-            <main>
-                <div class="header">
-                    <h1>Home</h1>
-                    <div class="top">
-                      <!--  <a href="#">BOH</a> -->
-                    </div>
-                </div>
 
-                <div class="insights">
-                    <div class="TariffaMedia">
-                        <span class="material-icons-sharp">euro</span>
-                        <div class="middle">
-                            <div class="left">
-                                <h3>Tariffe Medie</h3>
-                                <h1>1,30 $</h1>
-                            </div>
-                            <div class="progress">
-                                <div class="number">
-                                    <p>43%</p>
-                                </div>
-                            </div>
-                        </div>
-                        <small class="text-muted">Ultime 24 ore</small>
-                    </div>
-                    <!------------------- END OF TARIFFE ------------------->
-                    <div class="PostiLiberi">
-                        <span class="material-icons-sharp">local_parking</span>
-                        <div class="middle">
-                            <div class="left">
-                                <h3>Posti Liberi</h3>
-                                <h1>38</h1>
-                            </div>
-                            <div class="progress">
-                                <div class="number">
-                                    <p>23%</p>
-                                </div>
-                            </div>
-                        </div>
-                        <small class="text-muted">Ultime 24 ore</small>
-                    </div>
-                    <!------------------- END OF FREE SPACES ------------------->
-                    <div class="SostaMedia">
-                        <span class="material-icons-sharp">incomplete_circle</span>
-                        <div class="middle">
-                            <div class="left">
-                                <h3>Sosta Media</h3>
-                                <h1>3 h</h1>
-                            </div>
-                            <div class="progress">
-                                <div class="number">
-<!--                                    <p>81%</p>-->
-                                </div>
-                            </div>
-                        </div>
-                        <small class="text-muted">Ultime 24 ore</small>
-                    </div>
-                    <!------------------- END OF USUAL PARKING LENGHT ------------------->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!--MATERIAL ICONS-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!---------------  STARTING ASIDE  ---------------->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="./Images/ITS-Alto-Adriatico.png" class="responsive">
+                    <h1> Project <span class="project"> Work 2022 </span></h1>
                 </div>
-                <!-----------------------  END OF INSIGHTS  ------------------->
-                <!------------------  STARTING TABLE  --------------------->
-                <div class="posteggi">
-                    <h2>Posteggi</h2>
-                    <a href="#">Cambia Piano</a>
-                    <table>
-                        <thread>
-                            <tr>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                        </thread>
-                        <tbody>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!----------------  END OF TABLE  ------------------>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
                 </div>
-            </main>
-            <!---------------------  END OF MAIN  --------------------->
-            <div class="right">
-                <div class="top">
-                    <button id="menu-btn">
-                            <span class="material-icons-sharp">menu</span>
-                    </button>
-                    <div class="theme-toggler">
-                        <span class="material-icons-sharp active">light_mode</span>
-                        <span class="material-icons-sharp">dark_mode</span>
-                    </div>
-                </div>
-                <!--------------  END OF TOP  -------------------------->
             </div>
+
+            <div class="sidebar">
+                <a href="#">
+                    <span class="material-icons-sharp">home</span>
+                    <h3>Home</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">local_parking</span>
+                    <h3>Parcheggi</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">toll</span>
+                    <h3>Posti Liberi</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">schedule</span>
+                    <h3>Sosta Media</h3>
+                </a>
+            </div>
+        </aside>
+        <!-------------------- END OF ASIDE -------------------->
+        <!-----------------  STARTING MAIN  ------------------->
+        <main>
+            <div class="header">
+                <h1>Home</h1>
+                <div class="top">
+                    <!--  <a href="#">BOH</a> -->
+                </div>
+            </div>
+
+            <div class="insights">
+                <div class="TariffaMedia">
+                    <span class="material-icons-sharp">euro</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Tariffe Medie</h3>
+                            <h1>1,30 $/h</h1>
+                        </div>
+                        <div class="progress">
+                            <div class="number">
+                                <p>43%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Ultime 24 ore</small>
+                </div>
+                <!------------------- END OF TARIFFE ------------------->
+                <div class="PostiLiberi">
+                    <span class="material-icons-sharp">local_parking</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Posti Liberi</h3>
+                            <h1>38</h1>
+                        </div>
+                        <div class="progress">
+                            <div class="number">
+                                <p>23%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Ultime 24 ore</small>
+                </div>
+                <!------------------- END OF FREE SPACES ------------------->
+                <div class="SostaMedia">
+                    <span class="material-icons-sharp">incomplete_circle</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Sosta Media</h3>
+                            <h1>3 h</h1>
+                        </div>
+                        <div class="progress">
+                            <div class="number">
+                                <!--                                    <p>81%</p>-->
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Ultime 24 ore</small>
+                </div>
+                <!------------------- END OF USUAL PARKING LENGHT ------------------->
+            </div>
+            <!-----------------------  END OF INSIGHTS  ------------------->
+            <!------------------  STARTING TABLE  --------------------->
+            <div class="posteggi">
+                <h2>Posteggi</h2>
+                <a href="#">Cambia Piano</a>
+                <table>
+                    <thread>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thread>
+                    <tbody>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>001</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>002</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>003</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">local_parking</span>
+                                <p>004</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>005</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>006</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">local_parking</span>
+                                <p>007</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">local_parking</span>
+                                <p>008</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">local_parking</span>
+                                <p>009</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>010</p>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>011</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>012</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>013</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">local_parking</span>
+                                <p>014</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>015</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>016</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">local_parking</span>
+                                <p>017</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">local_parking</span>
+                                <p>018</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">local_parking</span>
+                                <p>019</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>020</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>021</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>022</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>023</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">local_parking</span>
+                                <p>024</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>025</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>026</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">local_parking</span>
+                                <p>027</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">local_parking</span>
+                                <p>028</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">local_parking</span>
+                                <p>029</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>030</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>031</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>032</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>033</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">local_parking</span>
+                                <p>034</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>035</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>036</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">local_parking</span>
+                                <p>037</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">local_parking</span>
+                                <p>038</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">local_parking</span>
+                                <p>039</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>040</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>041</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>042</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>043</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">local_parking</span>
+                                <p>044</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>045</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>046</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">local_parking</span>
+                                <p>047</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">local_parking</span>
+                                <p>048</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">local_parking</span>
+                                <p>049</p>
+                            </td>
+                            <td>
+                                <span class="material-icons-sharp">directions_car</span>
+                                <p>050</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!----------------  END OF TABLE  ------------------>
+            </div>
+        </main>
+        <!---------------------  END OF MAIN  --------------------->
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+            </div>
+            <!--------------  END OF TOP  -------------------------->
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
