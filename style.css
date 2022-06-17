@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap");
 
 /*-------------------  ROOT  VARIABLES  ------------------*/
 :root {
@@ -35,11 +35,10 @@
     --color-dark: #edeffd;
     --color-dark-variant: #a3bdcc;
     --color-light: rgba(0, 0, 0, 0.4);
-    --box-shadow: 0 2rem 3rem var(--color-light)
+    --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
-
-*{
+* {
     margin: 0;
     padding: 0;
     outline: 0;
@@ -50,11 +49,11 @@
     box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 14px;
 }
 
-body{
+body {
     width: 100vw;
     height: 100vh;
     font-family: Nunito, sans-serif;
@@ -65,7 +64,7 @@ body{
     color: var(--color-dark);
 }
 
-.container{
+.container {
     display: grid;
     width: 96%;
     margin: 0 auto;
@@ -73,8 +72,8 @@ body{
     grid-template-columns: 17rem auto 5rem;
 }
 
-a{
-    color: var(--color-dark)
+a {
+    color: var(--color-dark);
 }
 
 img {
@@ -82,12 +81,12 @@ img {
     width: 100%;
 }
 
-h1{
+h1 {
     font-weight: 800;
     font-size: 1.8rem;
 }
 
-h2{
+h2 {
     font-size: 1.4rem;
 }
 
@@ -107,13 +106,12 @@ small {
     font-size: 0.75rem;
 }
 
-
 .text-muted {
-    color: var(--color-info-dark)
+    color: var(--color-info-dark);
 }
 
 p {
-    color: var(--color-dark-variant)
+    color: var(--color-dark-variant);
 }
 
 b {
@@ -188,7 +186,7 @@ aside .sidebar a {
 
 aside .sidebar a span {
     font-size: 1.6rem;
-    transition: all 300ms ease ;
+    transition: all 300ms ease;
 }
 
 aside .sidebar a.active {
@@ -260,9 +258,8 @@ main .insights > div.TariffaMedia span {
     background: var(--color-success);
 }
 
-
 main .insights > div.PostiLiberi span {
-    background: var(--color-primary)
+    background: var(--color-primary);
 }
 
 main .insights > div.SostaMedia span {
@@ -275,7 +272,7 @@ main .insights > div .middle {
     justify-content: space-between;
 }
 
-main .insights h3{
+main .insights h3 {
     margin: 1rem 0 0.6rem;
     font-size: 1rem;
 }
@@ -298,7 +295,7 @@ main .insights .progress .number {
     align-items: center;
 }
 
-main .insights small{
+main .insights small {
     margin-top: 1.6rem;
     display: block;
 }
@@ -322,6 +319,10 @@ main .posteggi table {
     transition: all 300ms ease;
 }
 
+main .posteggi table.table1 {
+    display: none;
+}
+
 main .posteggi table:hover {
     box-shadow: none;
 }
@@ -335,7 +336,7 @@ main table tbody tr:last-child td {
     border: none;
 }
 
-main .posteggi a{
+main .posteggi a {
     text-align: right;
     display: block;
     margin: 1rem auto;
@@ -343,11 +344,11 @@ main .posteggi a{
 }
 
 /*----------------- RIGHT -----------------*/
-.right{
+.right {
     margin-top: 2rem;
 }
 
-.right .top{
+.right .top {
     display: flex;
     justify-content: end;
     gap: 2rem;
@@ -385,7 +386,7 @@ main .posteggi a{
 
 /*-------------------  MEDIA QUERIES  ---------------*/
 @media screen and (max-width: 1200px) {
-    .container{
+    .container {
         width: 94%;
         grid-template-columns: 7rem auto 23rem;
     }
@@ -394,11 +395,11 @@ main .posteggi a{
         display: none;
     }
 
-    aside .sidebar h3{
+    aside .sidebar h3 {
         display: none;
     }
 
-    aside .sidebar a{
+    aside .sidebar a {
         width: 5.6rem;
     }
 
@@ -412,7 +413,7 @@ main .posteggi a{
         gap: 0;
     }
 
-    main .posteggi{
+    main .posteggi {
         width: 94%;
         position: absolute;
         left: 50%;
@@ -423,114 +424,111 @@ main .posteggi a{
     main .posteggi table {
         width: 83vw;
     }
-
-
 }
 
 /*------------------- MEDIA QUERIES  -----------------*/
 @media screen and (max-width: 768px) {
-.container {
-    width: 100%;
-    grid-template-columns: 1fr;
-}
-aside {
-    position: fixed;
-    left: -100%;
-    background: var(--color-white);
-    width: 18rem;
-    z-index: 3;
-    box-shadow: 1rem 3rem 4rem var(--color-light);
-    height: 100vh;
-    padding-right: var(--card-padding);
-    display: none;
-    animation: showMenu 400ms ease forwards;
-}
-
-@keyframes showMenu {
-    to{
-        left: 0;
+    .container {
+        width: 100%;
+        grid-template-columns: 1fr;
     }
-}
+    aside {
+        position: fixed;
+        left: -100%;
+        background: var(--color-white);
+        width: 18rem;
+        z-index: 3;
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        height: 100vh;
+        padding-right: var(--card-padding);
+        display: none;
+        animation: showMenu 400ms ease forwards;
+    }
 
-aside .logo {
-    margin-left: 1rem;
-}
+    @keyframes showMenu {
+        to {
+            left: 0;
+        }
+    }
 
-aside .logo h2{
-    display: inline;
-}
+    aside .logo {
+        margin-left: 1rem;
+    }
 
-aside .sidebar h3{
-    display: inline;
-}
+    aside .logo h2 {
+        display: inline;
+    }
 
-aside .sidebar a{
-    width: 100%;
-    height: 3.4rem;
-}
+    aside .sidebar h3 {
+        display: inline;
+    }
 
-aside .sidebar a:last-child{
-    position: absolute;
-    bottom: 5rem;
-}
+    aside .sidebar a {
+        width: 100%;
+        height: 3.4rem;
+    }
 
-aside .close{
-    display: inline-block;
-    cursor: pointer;
-}
+    aside .sidebar a:last-child {
+        position: absolute;
+        bottom: 5rem;
+    }
 
-main {
-    margin-top: 8rem;
-    padding: 0 1rem;
-}
+    aside .close {
+        display: inline-block;
+        cursor: pointer;
+    }
 
-main .posteggi {
-    position: relative;
-    margin: 3rem 0 0 0;
-    width: 100%;
-}
+    main {
+        margin-top: 8rem;
+        padding: 0 1rem;
+    }
 
-main .posteggi table{
-    width: 100%;
-    margin: 0;
-}
+    main .posteggi {
+        position: relative;
+        margin: 3rem 0 0 0;
+        width: 100%;
+    }
 
-.right {
-    width: 94%;
-    margin: 0 auto 4rem;
-}
+    main .posteggi table {
+        width: 100%;
+        margin: 0;
+    }
 
-.right .top {
-    position: fixed;
-    top: 0;
-    left: 0;
-    align-items: center;
-    padding: 0 0.8rem;
-    height: 4.6rem;
-    background: var(--color-white);
-    width: 100%;
-    margin: 0;
-    z-index: 2;
-    box-shadow: 0 1rem 1rem var(--color-light);
-}
+    .right {
+        width: 94%;
+        margin: 0 auto 4rem;
+    }
 
-.right .top .theme-toggler {
-    width: 4.4rem;
-    position: absolute;
-    left: 66%;
-}
+    .right .top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        padding: 0 0.8rem;
+        height: 4.6rem;
+        background: var(--color-white);
+        width: 100%;
+        margin: 0;
+        z-index: 2;
+        box-shadow: 0 1rem 1rem var(--color-light);
+    }
 
-.right .top button {
-    display: inline-block;
-    background: transparent;
-    cursor: pointer;
-    color: var(--color-dark);
-    position: absolute;
-    left: 1rem;
-}
+    .right .top .theme-toggler {
+        width: 4.4rem;
+        position: absolute;
+        left: 66%;
+    }
 
-.right .top button span {
-    font-size: 2rem;
-}
+    .right .top button {
+        display: inline-block;
+        background: transparent;
+        cursor: pointer;
+        color: var(--color-dark);
+        position: absolute;
+        left: 1rem;
+    }
 
+    .right .top button span {
+        font-size: 2rem;
+    }
 }

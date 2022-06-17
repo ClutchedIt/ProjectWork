@@ -28,19 +28,19 @@
 
             <div class="sidebar">
                 <a href="#">
-                    <span class="material-icons-sharp">home</span>
+                    <span class="material-icons-sharp btn btn-primary" onclick="toggleHome(home)" id="home">home</span>
                     <h3>Home</h3>
                 </a>
                 <a href="#">
-                    <span class="material-icons-sharp">local_parking</span>
+                    <span class="material-icons-sharp" onclick="toggle (parcheggi)" id="parcheggi">local_parking</span>
                     <h3>Parcheggi</h3>
                 </a>
                 <a href="#">
-                    <span class="material-icons-sharp">toll</span>
+                    <span class="material-icons-sharp" onclick="togglePosti()" id="posti_liberi">toll</span>
                     <h3>Posti Liberi</h3>
                 </a>
                 <a href="#">
-                    <span class="material-icons-sharp">schedule</span>
+                    <span class="material-icons-sharp" onclick="toggleSosta()" id="sosta_media">schedule</span>
                     <h3>Sosta Media</h3>
                 </a>
             </div>
@@ -110,9 +110,15 @@
             <div class="posteggi">
                 <div style="display: flex; flex-direction: row; justify-content: start; margin-left: 6rem;">
                     <h2>Posteggi</h2>
-                    <a href="#" style="margin-right: 6rem;">Cambia Piano</a>
+                    <!--  <a href="#" style="margin-right: 6rem;">Cambia Piano</a> -->
+                    <div class="tables" style="margin: 0rem auto;">
+                        <div class="page-toggler">
+                            <span class="material-icons-sharp active" onclick="showTable1" id="tb1" data-table="tbl0">looks_one</span>
+                            <span class="material-icons-sharp" onclick="showTable2" id="tb2" data-table="tbl1">looks_two</span>
+                        </div>
+                    </div>
                 </div>
-                <table>
+                <table id="tbl0" class="table">
                     <thread>
                         <tr>
                             <th scope="col"></th>
@@ -344,9 +350,114 @@
                                 <p>050</p>
                             </td>
                         </tr>
-                    </tbody>
-                </table>
-                <!----------------  END OF TABLE  ------------------>
+                        </tbody>
+                    </table>
+                    <table id="tbl1" class="table1">
+                        <thread>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thread>
+                        <tbody>
+                            <tr>
+                                <th scope="row"></th>
+                                <td>
+                                    <span class="material-icons-sharp">directions_car</span>
+                                    <p>001</p>
+                                </td>
+                                <td>
+                                    <span class="material-icons-sharp">directions_car</span>
+                                    <p>002</p>
+                                </td>
+                                <td>
+                                    <span class="material-icons-sharp">directions_car</span>
+                                    <p>003</p>
+                                </td>
+                                <td>
+                                    <span class="material-icons-sharp">local_parking</span>
+                                    <p>004</p>
+                                </td>
+                                <td>
+                                    <span class="material-icons-sharp">directions_car</span>
+                                    <p>005</p>
+                                </td>
+                                <td>
+                                    <span class="material-icons-sharp">directions_car</span>
+                                    <p>006</p>
+                                </td>
+                                <td>
+                                    <span class="material-icons-sharp">local_parking</span>
+                                    <p>007</p>
+                                </td>
+                                <td>
+                                    <span class="material-icons-sharp">local_parking</span>
+                                    <p>008</p>
+                                </td>
+                                <td>
+                                    <span class="material-icons-sharp">local_parking</span>
+                                    <p>009</p>
+                                </td>
+                                <td>
+                                    <span class="material-icons-sharp">directions_car</span>
+                                    <p>010</p>
+                                </td>
+                    
+                            </tr>
+                            <tr>
+                                <th scope="row"></th>
+                                <td>
+                                    <span class="material-icons-sharp">directions_car</span>
+                                    <p>011</p>
+                                </td>
+                                <td>
+                                    <span class="material-icons-sharp">directions_car</span>
+                                    <p>012</p>
+                                </td>
+                                <td>
+                                    <span class="material-icons-sharp">directions_car</span>
+                                    <p>013</p>
+                                </td>
+                                <td>
+                                    <span class="material-icons-sharp">local_parking</span>
+                                    <p>014</p>
+                                </td>
+                                <td>
+                                    <span class="material-icons-sharp">directions_car</span>
+                                    <p>015</p>
+                                </td>
+                                <td>
+                                    <span class="material-icons-sharp">directions_car</span>
+                                    <p>016</p>
+                                </td>
+                                <td>
+                                    <span class="material-icons-sharp">local_parking</span>
+                                    <p>017</p>
+                                </td>
+                                <td>
+                                    <span class="material-icons-sharp">local_parking</span>
+                                    <p>018</p>
+                                </td>
+                                <td>
+                                    <span class="material-icons-sharp">local_parking</span>
+                                    <p>019</p>
+                                </td>
+                                <td>
+                                    <span class="material-icons-sharp">directions_car</span>
+                                    <p>020</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                        <!----------------  END OF TABLE  ------------------>
             </div>
         </main>
         <!---------------------  END OF MAIN  --------------------->
@@ -364,5 +475,32 @@
         </div>
     </div>
     <script src="./index.js"></script>
+
+    <script type="text/javascript">
+        function toggleHome(home) {
+            var element = document.getElementById(parcheggi);
+            if (element.style.display === "none") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+
+    <script>
+        var a = document.getElementById("tbl0");
+        var b = document.getElementById("tbl1");
+
+        function showTable1() {
+            a.style.display = "block";
+            b.style.display = "none";
+        }
+
+        function showTable2() {
+            a.style.display = "none";
+            b.style.display = "block";
+        }
+    </script>
 </body>
+
 </html>
