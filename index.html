@@ -18,7 +18,6 @@
         <aside>
             <div class="top">
                 <div class="logo">
- <!--                   <img src="./Images/rubberduck.svg" class="responsive">  -->
                     <div class="subtitle">
                     <h2> Project <span class="project"> Work 2022 </span></h2>
                     </div>
@@ -30,20 +29,12 @@
 
             <div class="sidebar">
                 <a href="#">
-                    <span class="material-icons-sharp btn btn-primary" onclick="toggleHome(home)" id="home">home</span>
+                    <span class="material-icons-sharp btn btn-primary">home</span>
                     <h3>Home</h3>
                 </a>
                 <a href="#">
-                    <span class="material-icons-sharp" onclick="toggle (parcheggi)" id="parcheggi">local_parking</span>
-                    <h3>Parcheggi</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp" onclick="togglePosti()" id="posti_liberi">toll</span>
-                    <h3>Posti Liberi</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp" onclick="toggleSosta()" id="sosta_media">schedule</span>
-                    <h3>Sosta Media</h3>
+                    <span class="material-icons-sharp">remove_circle_outline</span>
+                    <h3>Area Riservata</h3>
                 </a>
             </div>
         </aside>
@@ -111,17 +102,13 @@
             <div class="posteggi">
                 <div style="display: flex; flex-direction: row; justify-content: start; margin-left: 6rem;">
                     <h2>Posteggi</h2>
-                    <!--  <a href="#" style="margin-right: 6rem;">Cambia Piano</a> -->
-                    <div class="tables" style="margin: 0rem auto;">
-                        <div class="page-toggler">
-                            <span class="material-icons-sharp active" onclick="showTable1" id="tb1"
-                                data-table="tbl0">looks_one</span>
-                            <span class="material-icons-sharp" onclick="showTable2" id="tb2"
-                                data-table="tbl1">looks_two</span>
-                        </div>
+                    <div class="tables">
                     </div>
                 </div>
-                <table id="tbl0" class="table">
+                <div class="table">
+                    <h1>ciaO</h1>
+                </div>
+            <!--    <table id="tbl0" class="table">
                     <thread>
                         <tr>
                             <th scope="col"></th>
@@ -459,12 +446,17 @@
                             </td>
                         </tr>
                     </tbody>
-                </table>
+                </table> -->
                 <!----------------  END OF TABLE  ------------------>
             </div>
-
-            <div class="logo">
-    <!--            <img src="./Images/ITS-Alto-Adriatico.png" class="responsive">  -->
+            <div class="sec-center">
+                <input class="dropdown" type="checkbox" id="dropdown" name="dropdown" />
+                <label class="for-dropdown" for="dropdown" style="text-align: center; font-size: 10px; color: var(--color-primary);">Seleziona il piano <i
+                        class="uil uil-arrow-down"></i></label>
+                <div class="section-dropdown">
+                    <a href="#" style="text-align: center;"> 1 </a>
+                    <a href="#"> 2 </a>
+                </div>
             </div>
         </main>
         <!---------------------  END OF MAIN  --------------------->

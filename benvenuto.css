@@ -69,7 +69,7 @@ body {
     width: 96%;
     margin: 0 auto;
     gap: 1.8rem;
-    grid-template-columns: 15rem auto 5rem;
+    grid-template-columns: 15rem auto 10rem;
 }
 
 a {
@@ -175,7 +175,7 @@ main {
 main .header {
     text-align: left;
     display: flex;
-    color: var(--color-danger);
+    color: var(--color-primary);
 }
 
 main .logo img {
@@ -226,10 +226,10 @@ main .sec-center {
     -ms-flex-pack: center;
     text-align: center;
     border: none;
-    background-color: var(--color-danger);
+    background-color: var(--color-white);
     cursor: pointer;
-    color: #000000;
-    box-shadow: 0 12px 35px 0 rgba(255, 235, 167, 0.15);
+    color: var(--color-dark);
+    box-shadow: 0 12px 35px 0 var(--color-white);
 }
 
 .dropdown:checked + label:before,
@@ -262,13 +262,13 @@ main .sec-center {
     position: relative;
     margin: auto;
     padding: 5px;
-    background-color: var(--color-dark);
+    background-color: var(--color-white);
     top: 15px;
     left: 0;
     width: 400px;
     border-radius: var(--border-radius-1);
     display: block;
-    box-shadow: 0 14px 35px 0 rgba(9, 9, 12, 0.4);
+    box-shadow: 0 14px 35px 0 var(--color-white);
     z-index: 2;
     opacity: 0;
     pointer-events: none;
@@ -276,7 +276,7 @@ main .sec-center {
 }
 .dark-light:checked ~ .sec-center .section-dropdown {
     background-color: var(--color-white);
-    box-shadow: 0 14px 35px 0 rgba(9, 9, 12, 0.15);
+    box-shadow: 0 14px 35px 0 var(--color-dark);
 }
 .dropdown:checked ~ .section-dropdown {
     opacity: 1;
@@ -301,7 +301,7 @@ main .sec-center {
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 8px solid var(--color-dark);
+    border-bottom: 8px solid var(--color-white);
     content: "";
     display: block;
     z-index: 2;
@@ -310,7 +310,7 @@ main .sec-center {
 
 a {
     position: relative;
-    color: var(--color-white);
+    color: var(--color-dark);
     transition: all 200ms linear;
     font-weight: 500;
     font-size: 15px;
@@ -332,15 +332,15 @@ a {
 }
 
 a:hover {
-    color: #000000;
-    background-color: var(--color-danger);
+    color: var(--color-dark);
+    background-color: var(--color-primary);
 }
 
 a .uil {
     font-size: 22px;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 768px) {
     .logo {
         top: 30px;
         left: 20px;
@@ -355,7 +355,7 @@ a .uil {
 /*--------------- END DROPDOWN -------------------------*/
 /*---------------- RIGHT --------------------------------*/
 .right {
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 
 .right .top {
