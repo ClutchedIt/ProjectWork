@@ -29,7 +29,7 @@
 
             <div class="sidebar">
                 <a href="#">
-                    <span class="material-icons-sharp btn btn-primary">home</span>
+                    <span class="material-icons-sharp" ">home</span>
                     <h3>Home</h3>
                 </a>
                 <a href="#">
@@ -42,30 +42,28 @@
         <!-----------------  STARTING MAIN  ------------------->
         <main>
             <div class="header">
-                <h1 style="margin: 1rem auto;">Home</h1>
+                <h1 style="margin: 1rem auto; font-size: 3.2rem;">Home</h1>
                 <div class="top">
                 </div>
             </div>
 
             <div class="insights">
                 <div class="TariffaMedia">
-                    <span class="material-icons-sharp">euro</span>
                     <div class="middle">
                         <div class="left">
-                            <h3>Tariffe Medie</h3>
+                            <h3>Tariffe Odierna</h3>
                             <h1>1,30 $/h</h1>
                         </div>
                         <div class="progress">
                             <div class="number">
-                                <p>43%</p>
+                                <span class="material-icons-sharp">euro</span>
                             </div>
                         </div>
                     </div>
-                    <small class="text-muted">Ultime 24 ore</small>
+                    <small class="text-muted">Tariffa Media</small>
                 </div>
                 <!------------------- END OF TARIFFE ------------------->
                 <div class="PostiLiberi">
-                    <span class="material-icons-sharp">local_parking</span>
                     <div class="middle">
                         <div class="left">
                             <h3>Posti Liberi</h3>
@@ -73,7 +71,7 @@
                         </div>
                         <div class="progress">
                             <div class="number">
-                                <p>23%</p>
+                                <span class="material-icons-sharp">local_parking</span>
                             </div>
                         </div>
                     </div>
@@ -81,7 +79,6 @@
                 </div>
                 <!------------------- END OF FREE SPACES ------------------->
                 <div class="SostaMedia">
-                    <span class="material-icons-sharp">schedule</span>
                     <div class="middle">
                         <div class="left">
                             <h3>Sosta Media</h3>
@@ -89,7 +86,7 @@
                         </div>
                         <div class="progress">
                             <div class="number">
-                                <!--                                    <p>81%</p>-->
+                                <span class="material-icons-sharp">schedule</span>
                             </div>
                         </div>
                     </div>
@@ -100,15 +97,23 @@
             <!-----------------------  END OF INSIGHTS  ------------------->
             <!------------------  STARTING TABLE  --------------------->
             <div class="posteggi">
-                <div style="display: flex; flex-direction: row; justify-content: start; margin-left: 6rem;">
-                    <h2>Posteggi</h2>
-                    <div class="tables">
+                <div>
+                    <h2 style="text-align: center; font-size: 2rem;">Posteggi</h1>
+                    <div class="sec-center">
+                        <input class="dropdown" type="checkbox" id="dropdown" name="dropdown" />
+                        <label class="for-dropdown" for="dropdown" id="floorsDropdownParent" style="color: var(--color-primary);">Seleziona il piano <i class="uil-arrow-down"></i></label>
+                        <div class="section-dropdown" id="floorsDropdown">
+                            <a href="./Login.html" style="text-align: center;"> 1 </a>
+                            <a href="./Benvenuto.html"> 2 </a>
+                        </div>
                     </div>
                 </div>
-                <div class="table">
-                    <h1>ciaO</h1>
-                </div>
-            <!--    <table id="tbl0" class="table">
+                
+              <!--  <div class="table">
+                    <h2>Ciaoooo</h2>
+                </div> -->
+            </div>
+               <table id="tbl0" class="table0">
                     <thread>
                         <tr>
                             <th scope="col"></th>
@@ -446,18 +451,9 @@
                             </td>
                         </tr>
                     </tbody>
-                </table> -->
+                </table>
                 <!----------------  END OF TABLE  ------------------>
-            </div>
-            <div class="sec-center">
-                <input class="dropdown" type="checkbox" id="dropdown" name="dropdown" />
-                <label class="for-dropdown" for="dropdown" style="text-align: center; font-size: 10px; color: var(--color-primary);">Seleziona il piano <i
-                        class="uil uil-arrow-down"></i></label>
-                <div class="section-dropdown">
-                    <a href="#" style="text-align: center;"> 1 </a>
-                    <a href="#"> 2 </a>
-                </div>
-            </div>
+          <!--  </div>  -->
         </main>
         <!---------------------  END OF MAIN  --------------------->
         <div class="right">

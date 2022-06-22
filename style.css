@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap");
-
 /*-------------------  ROOT  VARIABLES  ------------------*/
 :root {
     --color-primary: #7380ec;
@@ -143,7 +142,15 @@ aside .top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 2rem;
+    margin-top: 3rem;
+}
+
+aside .topp {
+    background: var(--color-background);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5rem;
 }
 
 aside .logo {
@@ -173,17 +180,22 @@ aside .sidebar {
     height: 86vh;
     position: relative;
     top: 3rem;
+    left: 1.2rem;
+    text-align: left;
+    align-items: left;
 }
 
 aside h3 {
     font-weight: 500;
+    text-align: left;
 }
 
 aside .sidebar a {
     display: flex;
     color: var(--color-info-dark);
-    margin-left: 1PX;
+    margin-left: 1px;
     gap: 1rem;
+    text-align: left;
     align-items: center;
     position: relative;
     height: 3.7rem;
@@ -193,17 +205,19 @@ aside .sidebar a {
 aside .sidebar a span {
     font-size: 1.6rem;
     transition: all 300ms ease;
+    text-align: left;
 }
 
 aside .sidebar a.active {
     background: var(--color-light);
     color: var(--color-primary);
     margin-left: 0;
+    text-align: left;
 }
 
 aside .sidebar a.active:before {
     content: "";
-    width: 6px;
+    width: 8px;
     height: 100%;
     background: var(--color-primary);
 }
@@ -215,13 +229,62 @@ aside .sidebar a.active span {
 
 aside .sidebar a:hover {
     color: var(--color-white);
+    border-radius: var(--border-radius-1);
 }
 
 aside .sidebar a:hover span {
-    margin-left: 1rem;
+    margin-left: 1px;
 }
 
 /*----------------- MAIN --------------------*/
+/*-- MAIN BENVENUTO ---*/
+.main {
+    margin-top: 20rem;
+}
+
+.main .header {
+    text-align: left;
+    display: flex;
+    color: var(--color-primary);
+}
+
+/*-- END MAIN BENVENUTO ---*/
+
+/*---- MAIN LOGIN ----*/
+
+.login {
+    margin-top: 15rem;
+}
+
+.login .header {
+    text-align: center;
+    display: fixed;
+    color: var(--color-primary);
+    border-radius: var(--border-radius-1);
+}
+
+.login .header .accedi{
+    display: relative;
+    left: 20rem;
+}
+
+.login .header img {
+    margin: auto;
+    width: 20%;
+    height: 20%;
+}
+
+input[type=text] {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+     border-radius: var(--border-radius-2);
+     color: var(--color-dark-variant);
+     width: 250px;
+     height: 30px;
+     padding-left: 10px;
+}
+
+/*---- END MAIN LOGIN ----*/
 
 main {
     margin-top: 5.5rem;
@@ -307,15 +370,12 @@ main .insights small {
 }
 
 main .posteggi {
-    margin-top: 4rem;
-    display: block;
+    margin-top: 3rem;
+    display: relative;
 }
 
-main .posteggi h2 {
-    margin-bottom: 0.8rem;
-}
-
-main .posteggi .table {
+main .table0 {
+    display: absolute;
     background: var(--color-white);
     width: 100%;
     border-radius: var(--card-border-radius);
@@ -327,11 +387,11 @@ main .posteggi .table {
 
 
 
-main .posteggi table.table1 {
+main table.table1 {
     display: none;
 }
 
-main .posteggi table:hover {
+main table:hover {
     box-shadow: none;
 }
 
@@ -363,30 +423,196 @@ main .logo img {
 *::before,
 *::after {
     box-sizing: border-box;
-    text-align: center;
 }
 
-main .sec-center {
-    position: flex;
-    float: right;
-    margin-top: 2rem;
+.sec-center {
+    position: relative;
+    float: right; 
     max-width: 100%;
-    text-align: center;
-    z-index: 200;
+    z-index: 10;
+    bottom: 0.5rem;
+    border-radius: var(--border-radius-1);
+    box-shadow: 0 0 0 0 var(--color-dark-variant);
 }
 
 .dropdown:checked + label,
 .dropdown:not(:checked) + label {
     position: flex;
     font-weight: 500;
+    z-index: 10;
+    float: right;
     font-size: 15px;
-    line-height: 2;
     height: 50px;
     transition: all 200ms linear;
     border-radius: var(--border-radius-1);
     height: 40px;
     width: 150px;
+    letter-spacing: 1px;
+    display: inline-flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
     text-align: center;
+    border: none;
+    background-color: var(--color-white);
+    cursor: pointer;
+    color: var(--color-dark);
+}
+
+.dropdown:checked + label:before,
+.dropdown:not(:checked) + label:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: normal;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    cursor: auto;
+    pointer-events: none;
+}
+
+.dropdown:not(:checked) + label .uil {
+    font-size: 24px;
+    transition: transform 200ms linear;
+    z-index: 10;
+}
+
+.dropdown:checked + label .uil {
+    transform: rotate(180deg);
+    font-size: 24px;
+    margin-left: 10px;
+    transition: transform 200ms linear;
+}
+
+.section-dropdown {
+    position: absolute;
+    margin: auto;
+    text-align: center;
+    padding: 1px;
+    background-color: var(--color-white);
+    top: 38px;
+    left: 0;
+    width: 150px;
+  /*  border: 1px solid #000;*/
+    border-radius: var(--border-radius-1);
+    display: none;
+    box-shadow: 0 14px 35px -20px var(--color-dark-variant);
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 200ms linear;
+}
+
+.dark-light:checked ~ .sec-center .section-dropdown {
+    background-color: var(--color-white);
+    box-shadow: 0 14px 35px 0 var(--color-dark);
+    z-index: 10;
+}
+
+.dropdown:checked ~ .section-dropdown {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+    z-index: 10;
+}
+
+/*.section-dropdown:before {
+    position: relative; 
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    content: "";
+    display: block;
+    z-index: 10;
+}
+
+.section-dropdown:after {
+    position: absolute;
+    top: -7px;
+    left: 30px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid var(--color-white);
+    content: "";
+    display: block;
+    z-index: 10;
+    transition: all 200ms linear;
+}*/
+
+
+main .posteggi a {
+    position: relative;
+    color: var(--color-dark);
+    transition: all 200ms linear;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: var(--border-radius-1);
+    padding: 5px 0;
+    padding-left: 5rem;
+    padding-right: 15px;
+    margin: 2px 0;
+    text-decoration: none;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: space-between;
+    -ms-flex-pack: distribute;
+    z-index: 10;
+}
+
+a:hover {
+    color: var(--color-dark);
+    background-color: var(--color-primary);
+    z-index: 10;
+}
+
+a .uil {
+    font-size: 22px;
+    z-index: 10;
+}
+
+
+/*-------------- END DROPDOWN --------------*/
+
+/*------------- DROPDOWN BENVENUTO ----------*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.main .sec-centerino {
+    position: relative;
+    margin-top: 80px;
+    max-width: 100%;
+    text-align: center;
+    z-index: 200;
+}
+
+.main .dropdownn:checked + label,
+.main .dropdownn:not(:checked) + label {
+    position: center;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 2;
+    height: 50px;
+    transition: all 200ms linear;
+    border-radius: var(--border-radius-1);
+    height: 60px;
+    width: 400px;
     letter-spacing: 1px;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -408,12 +634,12 @@ main .sec-center {
     box-shadow: 0 12px 35px 0 var(--color-white);
 }
 
-.dropdown:checked + label:before,
-.dropdown:not(:checked) + label:before {
-    position: flex;
+.main .dropdownn:checked + label:before,
+.main .dropdownn:not(:checked) + label:before {
+    position: fixed;
     top: 0;
     left: 0;
-    content: normal;
+    content: "";
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -421,28 +647,31 @@ main .sec-center {
     pointer-events: none;
 }
 
-.dropdown:not(:checked) + label .uil {
+.main .dropdownn:checked + label:before {
+    pointer-events: auto;
+}
+
+.main .dropdownn:not(:checked) + label .uil {
     font-size: 24px;
     margin-left: 10px;
     transition: transform 200ms linear;
 }
 
-.dropdown:checked + label .uil {
+.main .dropdownn:checked + label .uil {
     transform: rotate(180deg);
     font-size: 24px;
     margin-left: 10px;
     transition: transform 200ms linear;
 }
 
-.section-dropdown {
-    position: flex;
+.main .section-dropdownn {
+    position: relative;
     margin: auto;
-    text-align: center;
-    padding: 1px;
+    padding: 5px;
     background-color: var(--color-white);
     top: 15px;
     left: 0;
-    width: 150px;
+    width: 400px;
     border-radius: var(--border-radius-1);
     display: block;
     box-shadow: 0 14px 35px 0 var(--color-white);
@@ -452,19 +681,19 @@ main .sec-center {
     transition: all 200ms linear;
 }
 
-.dark-light:checked ~ .sec-center .section-dropdown {
+.main .dark-light:checked ~ .sec-centerino .section-dropdownn {
     background-color: var(--color-white);
     box-shadow: 0 14px 35px 0 var(--color-dark);
 }
 
-.dropdown:checked ~ .section-dropdown {
+.main .dropdownn:checked ~ .section-dropdownn {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
 }
 
-.section-dropdown:before {
-    position: relative; 
+.main .section-dropdownn:before {
+    position: absolute;
     top: -20px;
     left: 0;
     width: 100%;
@@ -474,7 +703,7 @@ main .sec-center {
     z-index: 1;
 }
 
-.section-dropdown:after {
+.main .section-dropdownn:after {
     position: absolute;
     top: -7px;
     left: 30px;
@@ -489,7 +718,7 @@ main .sec-center {
     transition: all 200ms linear;
 }
 
-a {
+.main .sec-centerino .section-dropdownn a {
     position: relative;
     color: var(--color-dark);
     transition: all 200ms linear;
@@ -497,11 +726,12 @@ a {
     font-size: 15px;
     border-radius: var(--border-radius-1);
     padding: 5px 0;
-    padding-left: 5rem;
+    padding-left: 20px;
     padding-right: 15px;
     margin: 2px 0;
     text-align: left;
     text-decoration: none;
+    display: -ms-flexbox;
     display: flex;
     -webkit-align-items: center;
     -moz-align-items: center;
@@ -520,19 +750,7 @@ a .uil {
     font-size: 22px;
 }
 
-@media screen and (max-width: 768px) {
-    .logo {
-        top: 30px;
-        left: 20px;
-    }
-    .dark-light:checked + label,
-    .dark-light:not(:checked) + label {
-        top: 20px;
-        right: 20px;
-    }
-}
-
-/*-------------- END DROPDOWN --------------*/
+/*------------- END DROPDOWN BENVENUTO ------*/
 
 /*----------------- RIGHT -----------------*/
 .right {
@@ -579,7 +797,7 @@ a .uil {
 @media screen and (max-width: 1200px) {
     .container {
         width: 94%;
-        grid-template-columns: 7rem auto 23rem;
+        grid-template-columns: 7rem auto 7rem;
     }
 
     aside .logo {
@@ -602,14 +820,15 @@ a .uil {
     main .insights {
         grid-template-columns: 1fr;
         gap: 0;
+        margin: auto;
     }
 
     main .posteggi {
         width: 94%;
-        position: absolute;
+        position: relative;
         left: 50%;
+        margin-top: 2rem;
         transform: translateX(-50%);
-        margin: 2rem 0 0 8.8rem;
     }
 
     main .posteggi table {
@@ -659,10 +878,6 @@ a .uil {
         height: 3.4rem;
     }
 
-    aside .sidebar a:last-child {
-        position: absolute;
-        top: 8.5rem;
-    }
 
     aside .close {
         display: inline-block;
@@ -687,7 +902,7 @@ a .uil {
 
     .right {
         width: 94%;
-        margin: 0 auto 4rem;
+        margin: auto;
     }
 
     .right .top {
@@ -707,7 +922,6 @@ a .uil {
     .right .top .theme-toggler {
         width: 4.4rem;
         position: absolute;
-        left: 66%;
     }
 
     .right .top button {
@@ -723,3 +937,9 @@ a .uil {
         font-size: 2rem;
     }
 }
+
+    .dark-light:checked + label,
+    .dark-light:not(:checked) + label {
+        top: 20px;
+        right: 20px;
+    }

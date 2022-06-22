@@ -4,6 +4,20 @@ window.onload = () => {
   const menuBtn = document.querySelector("#menu-btn");
   const closeBtn = document.querySelector("#close-btn");
   const themeToggler = document.querySelector(".theme-toggler");
+  const floorsDropdown = document.querySelector("#floorsDropdown");
+  const floorsDropdownParent = document.getElementById('floorsDropdownParent')
+  let floorsDropdownState = false
+
+  floorsDropdownParent.addEventListener('click', () => {
+    if(!floorsDropdownState) {
+      floorsDropdown.style.display = 'block'
+    }
+    else {
+      floorsDropdown.style.display = 'none'
+    }
+
+    floorsDropdownState = !floorsDropdownState
+  })
 
   //open sidemenu
   menuBtn.addEventListener("click", () => {
@@ -14,6 +28,8 @@ window.onload = () => {
   closeBtn.addEventListener("click", () => {
     sideMenu.style.display = "none";
   });
+
+
 
   //change theme
   themeToggler.addEventListener("click", () => {
