@@ -141,7 +141,7 @@ aside .top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 aside .topp {
@@ -149,22 +149,24 @@ aside .topp {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 5rem;
+}
+
+aside .topp .subtitles {
+    margin-top: 60px;
+    margin-left: 20px;
 }
 
 aside .logo {
-    gap: 0.8rem;
+    gap: 0;
 }
 
 aside .logo img {
-    margin-left: 3rem;
-    width: 10rem;
-    height: 8rem;
+    width: 130%;
+    height: 130%;
 }
 
 aside .subtitle {
-    margin-left: 25px;
-    margin-top: 10px;
+    margin-left: 40px;
 }
 
 aside .close {
